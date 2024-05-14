@@ -1,1 +1,1 @@
-API_KEY = 'sk-proj-nbWIANIUx95XOiwKUkJ2T3BlbkFJuZe15OuJSozZFTmUGltB'
+API_KEY = ''
