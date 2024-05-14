@@ -1,0 +1,6 @@
+openai
+pandas
+textblob
+torch
+transformers
+logging
