@@ -22,6 +22,11 @@
 - `test_data_extractor.py`: Extracts test data.
 - `train_data_cleaning.py`: Cleans training data.
 - `train_data_extractor.py`: Extracts training data.
+## How I trained my model
+- `train_data_extractor.py` with desired comment limit
+- `train_data_cleaning.py`
+-  Uploaded the output csv file to AWS S3 and labelled using AWS SageMaker and exported as .manifest file
+-  Ran the script manifest_to_csv.py to get the labelled csv which was feed to the BERT model for finetuning in model_trainer.py
 
 ## How to Use
 
