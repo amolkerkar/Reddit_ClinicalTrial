@@ -30,7 +30,10 @@
    pip install -r requirements.txt
 2. Update the OpenAI API key in
 - `scripts/keyfile.py`
-4. Update the Praw client ID and secret ID in files:
+
+3. Download the model file, unzip and put it in the models folder:
+   
+5. Update the Praw client ID and secret ID in files:
 - `test_data_extractor.py`
 - `train_data_extractor.py`
 5. Run this file to get the updated test data, make sure to edit the number of posts and comments desired in the script
