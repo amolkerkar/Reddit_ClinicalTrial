@@ -32,6 +32,7 @@
 - `scripts/keyfile.py`
 
 3. Download the model file, unzip and put it in the models folder:
+   https://drive.google.com/file/d/1ERBW_ayibTyQkU4OGwMAU5acH7EhJDGR/view?usp=drive_link
    
 5. Update the Praw client ID and secret ID in files:
 - `test_data_extractor.py`
