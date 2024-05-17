@@ -3,13 +3,13 @@ import pandas as pd
 from textblob import TextBlob
 import time
 import logging
-from openai.error import RateLimitError, OpenAIError
-from scripts import keyfile
+from openai import RateLimitError, OpenAIError
+from keyfile import API_KEY
 
 #logging for api limit tracking
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-openai.api_key =  keyfile.API_KEY 
+openai.api_key =  API_KEY 
 
 df = pd.read_csv('output/final_potential_candidates.csv')
 
