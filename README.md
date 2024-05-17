@@ -68,3 +68,4 @@
 - Reddit usernames were hidden when dispalying the results anywhere on the internet
 - Some Subreddits have strict rules of not messaging the users for a research interest, those subreddits were not considered for data extraction
 - There was a pause introduced in data extraction algorithm adhering the reddit apis limit of data parsing rules
+- User engagement was done based on given the role in the GPT prompt as a empathetic recruited, so the messages generated were more personal and praised them about their weightloss or achievements which they boasted in the comments 
