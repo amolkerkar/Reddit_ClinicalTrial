@@ -3,4 +3,5 @@ pandas
 textblob
 torch
 transformers
+scikit-learn
 logging
