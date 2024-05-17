@@ -3,13 +3,13 @@ import pandas as pd
 from textblob import TextBlob
 import time
 import logging
-from openai import RateLimitError, OpenAIError
+from openai.error import RateLimitError, OpenAIError
 from keyfile import API_KEY
 
 #logging for api limit tracking
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-openai.api_key =  API_KEY 
+openai.api_key = API_KEY 
 
 df = pd.read_csv('output/final_potential_candidates.csv')
 
@@ -27,8 +27,8 @@ def generate_personalized_message(text, sentiment_score):
             response = openai.ChatCompletion.create(
                 model="gpt-3.5-turbo",
                 messages=[
-                    {"role": "system", "content": "You are a smart and empathetic salesman."},
-                    {"role": "user", "content": f"Generate a personalized message for the author of the following comment asking politely if they can participate in a clinical trial, taking into account the sentiment score ({sentiment_score}):\n\n{text}\n\nPersonalized message:"}
+                    {"role": "system", "content": "You are a smart and empathetic recruiter."},
+                    {"role": "user", "content": f"Generate a personalized message for the author of the following comment asking politely if they can participate in a clinical trial related to caffiene intake and anxiety, taking into account the sentiment score ({sentiment_score}):\n\n{text}\n\nPersonalized message:"}
                 ],
                 max_tokens=100,
                 temperature=0.7,
