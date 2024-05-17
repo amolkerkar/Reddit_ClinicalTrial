@@ -22,11 +22,26 @@
 - `test_data_extractor.py`: Extracts test data.
 - `train_data_cleaning.py`: Cleans training data.
 - `train_data_extractor.py`: Extracts training data.
-## How I trained my model
+
+  
+## Methodology
+### Step 1: Training a model which can find potential participants who may benefit using specific clinical trial or the perfect subjects
 - `train_data_extractor.py` with desired comment limit
 - `train_data_cleaning.py`
 -  Uploaded the output csv file to AWS S3 and labelled using AWS SageMaker and exported as .manifest file
 -  Ran the script manifest_to_csv.py to get the labelled csv which was feed to the BERT model for finetuning in model_trainer.py
+
+### Step 2: A reddit data scraper which look at the subreddits and searches where it may find these perfect subjects:
+- `test_data_extractor.py`: Extracts test data. was used to extract the data from particular
+- `test_data_cleaning.py`: Cleans test data.
+
+### Step 3: Personalized messaging considering the sentiment of the comment of post that user was found through
+- `inference.py`: Script for running inference. This file was responsible to given the list of potential candidates and their messages
+- `message_generator.py`: Generates personalized messages. A personalized messasge generator using the sentiment of the comment and empathetically generating a recruitment message
+
+More info in the PDF uploaded: [AmolKerkar_Turmerik_submission.pdf](https://github.com/amolkerkar/Reddit_ClinicalTrial/files/15358847/AmolKerkar_Turmerik_submission.pdf)
+
+
 
 ## How to Use
 
